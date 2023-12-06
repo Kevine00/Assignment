@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert {
+            display: none;
+            position:fixed;
+            top: 15px;
+            left: 40%;
+            transform: translateX(-65%);
+            padding: 13px;
+            background-color:black;
+            color: white;
+            border-radius: 12px;
+            z-index: 0000;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="myId">
+    <button onclick="getTextAndShowAlert()">Get Text</button>
+
+    <div class="alert" id="myAlert">
+        you did it!!!!!
+    </div>
+    <script>
+        function getTextAndShowAlert() {
+            var inputValue = document.getElementById('myId').value;
+            console.log(inputValue);
+            
+            document.getElementById('myId').value = '';
+
+            var alertBox = document.getElementById('myAlert');
+            alertBox.style.display = 'block';
+            setTimeout(function() {
+                alertBox.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

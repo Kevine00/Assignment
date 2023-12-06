@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="signup.html">
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <button onclick="checkAccount()">welcome!!!!</button>
+
+  <script>
+    function checkAccount() {
+      var hasAccount = confirm("Do you have an account?");
+
+      if (!hasAccount) {
+       
+        window.location.href = "signup.html"; 
+      } else {
+        window.location.href="login.html";
+      }
+    }
+
+  </script>
+</body>
+</html> 
+
